@@ -6,6 +6,6 @@ jobs:
     steps:
       # checkout handles the retrieval of the repository's code and
       # allows you to run scripts or other actions against your code (such as build and test tools)
-      - name: Check out repository code  # optional but recommended
+      - name: check out repo  # optional but recommended
         uses: actions/checkout@v3
       - run: echo "$(cat hello_world.txt)"
