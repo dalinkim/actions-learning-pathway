@@ -35,15 +35,6 @@ jobs:
       - run: npm test
   deploy:
     needs: test
-    # permissions keyword controls what tasks or processes our workflow can perform
-    # To deploy to Pages, it's essential that token has the necessary “write” access.
-    permissions:
-      deployments: write
-      contents: write
-      statuses: write
-      actions: write
-      pages: write
-      id-token: write
     environment:
       name: production
       url: ${{ steps.deployment.outputs.page_url }}
