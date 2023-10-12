@@ -65,3 +65,5 @@ jobs:
         # or to check on its status in more intricate workflows.
         id: deployment
         uses: actions/deploy-pages@v1
+      - name: add markdown
+        run: echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
